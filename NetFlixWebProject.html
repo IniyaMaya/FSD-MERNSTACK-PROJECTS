@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Netflix India</title>
+    <style>
+        .main1 {
+            display:flex;
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+            border-top-left-radius:25%;
+            border-top-right-radius:25%;
+        }
+        .main1 img {
+            width: 100vw;
+            height: 100vh;
+            background-size: cover;
+            background-position: center; /* Centers the image */
+            background-repeat: no-repeat; /* Prevents repeating */
+            overflow: hidden; 
+            position: absolute;
+            z-index: -1;
+        }
+        .main11{ position:absolute; /* where to place */
+          
+                top:20px;
+                left:100px;
+            }
+         
+         .main11 img {
+            width: 250px;
+            height: 100px;
+                }
+
+        .main12 {
+            position: absolute;
+            top: 150px;
+            color: azure;
+            font-size: xx-large;
+            text-align: center;
+            left: 25vw;
+            right: 25vw;
+        }
+       .main12 h1,h4,p{
+                 margin:3px;
+            }
+
+         .main13 {
+            position:absolute;
+            top:450px;
+            width: 50vw;
+            height:20vh;
+            left:25vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .main13 input {
+            width: 420px;
+            height: 50px;
+            background-color: gray;
+            border: 2px solid silver;
+        }
+        .main13 input::placeholder {
+            color: rgba(251, 248, 248, 0.5);
+            padding: 10px;
+            font-size: larger;
+            text-align:center;
+        }
+        .main13 button {
+            width: 220px;
+            height: 60px;
+            background-color: red;
+            font-size: larger;
+            border-radius: 10px;
+            color: white;
+            border: none;
+        }
+        .main14 {
+            position: absolute;
+            top: 50px;
+            right: 150px;
+            }
+        .main14 select {
+            width: 100px;
+            height: 30px;
+      
+            background-color: black;
+            border: 2px solid gray;
+            border-radius: 5px;
+            color: white;
+            
+        }
+        .main14 option {
+            background-color: Skyblue;
+        }
+        .main14 td {
+            width: 100px;
+            height: 30px;
+            text-align:center;
+            background-color: black;
+            color: white;
+            border-radius:10px;
+            /*border:2px solid white;*/
+            border: 1px solid gray;
+        }
+       .main14 td:hover{
+           background-color: blue;
+        }
+        #td{
+         background-color:gray;
+
+         }
+      #td1{
+         background-color:red;
+
+         }
+
+      .main2{
+            position: relative;
+            background-color:brown;
+            width:100vw;
+            height:100vh;
+            display: flex;
+            margin:0px
+            left:15%;
+            top :10px;
+            padding: 0 10px;
+             border-top-left-radius:25%;
+            border-top-right-radius:25%;
+
+           }
+          .m1{ 
+          position:absolute;
+          width:70%;
+          height:80px;
+          padding: 0 10px;
+          font-size:larger;
+          color:azure;
+          top:40px;
+          border-radius:10px;
+          margin-left:15%;
+          color:white;
+          background-color:blueviolet;
+          transition:transform 0.3s ease;
+         }
+       .m11{ 
+           position:absolute;
+          }
+       .m11 img{
+           width:60px;
+           padding:10px;
+          }
+        .m12{ position:absolute;
+              left:150px;
+                           # margin:1px;
+
+          }
+       .m13{ position:absolute;
+             right:40px;
+             top:20px;
+          }
+       .m13 button{
+            width:100px;
+            height:30px;
+            background-color:gray;
+            color:azure;
+        }
+       .m14 img{
+           position: absolute;
+           width: 20px;
+           height: 20px;
+           right: 10px; /* Adds space from the right */
+           top: 5px; /* Adds space from the top */
+           cursor: pointer; /* Changes cursor to pointer for better UX */
+           transition: transform 0.2s ease-in-out;
+            }
+      .m14 img:hover {
+               transform: scale(1.1); /* Slight zoom effect on hover */
+         }
+         
+  /* image of the movies collection */
+    #m1 {
+       position: relative; /* Set position to relative for #m1 to be the reference container */
+       width: 250px; /* Set a specific width for #m1 */
+       height: 300px; /* Set a specific height for #m1 */
+       background-color: lightgray; /* Optional for better visualization */
+       top:160px;
+       transition: all 0.5s ease-in-out; /* Smooth transition for all changes */
+       border-radius:20px;}
+
+    #m1 img {
+         width: 100%; /* Ensures the image inside #m1 is fully displayed */
+         height: 100%; /* Ensures it fills the container */
+         object-fit: cover; /* Keeps the aspect ratio */
+         margine-left:30px;
+         border-radius:20px;
+      }
+
+   #m1:hover {
+      transform: scale(1.1); /* Example: Slightly enlarges on hover */ }
+
+  #m2 {
+    position: absolute; /* Allows positioning relative to the nearest positioned ancestor (#m1) */
+    bottom: 0; /* Places it at the bottom */
+    left: 20px; /* Places it to the left */
+    width: 50px; /* You can adjust the size as needed */
+    height: 50px;
+    top:400px;#450
+   /* margine-left:10px;*/
+}
+
+  #m2 img {
+     width: 100%; /* Ensure the image fills the container */
+     height: 100%;
+     object-fit: contain; /* Ensures the image retains its aspect ratio */
+
+    }
+    #m11 {
+    position: relative;
+    width:250px; /* Adjust as needed */
+    height:300px;
+    top:160px;
+    left:70px;
+    border-radius:20px;
+    background-color: lightgray; /* For visualization */
+  }
+
+  #m11 img {
+     width: 100%;
+    height: 100%;
+    margin-left:50px;
+    object-fit: contain;
+  }
+   #m11:hover {
+       background-color: #f08080; /* Changes color on hover */
+       transform: scale(1.1); /* Example: Enlarges on hover */
+   }
+  #m22 {
+    position: absolute;
+    width: 50px; /* Adjust as needed */
+    height: 50px;
+    bottom: 40px; /* Moves it to bottom of #m11 */
+    left: 360px; /* Aligns to bottom-left */
+    top:400px;
+    transition: all 0.5s ease-in-out; /* Smooth transition for all changes */
+
+  }
+
+  #m22 img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+  }
+
+  #m3 {
+    position: relative; /* Set position to relative for #m1 to be the reference container */
+    width: 250px; /* Set a specific width for #m1 */
+    height: 300px; /* Set a specific height for #m1 */
+    background-color: lightgray; /* Optional for better visualization */
+    top:160px;
+    transition: all 0.5s ease-in-out; /* Smooth transition for all changes */
+    left:180px;
+
+
+  }
+
+  #m3 img {
+      width: 100%; /* Ensures the image inside #m1 is fully displayed */
+      height: 100%; /* Ensures it fills the container */
+      object-fit: cover; /* Keeps the aspect ratio */
+      margine-left:20px;
+      border-radius:20px;
+   }
+
+ #m3:hover {
+    transform: scale(1.1); /* Example: Slightly enlarges on hover */
+ }
+      #m4 {
+    position: absolute; /* Allows positioning relative to the nearest positioned ancestor (#m1) */
+    bottom: 0; /* Places it at the bottom */
+    left: 700px; /* Places it to the left */
+    width: 50px; /* You can adjust the size as needed */
+    height: 50px;
+    top:400px;/*450*/
+   /* margine-left:10px;*/
+}
+
+  #m4 img {
+     width: 100%; /* Ensure the image fills the container */
+     height: 100%;
+     object-fit: contain; /* Ensures the image retains its aspect ratio */
+
+    }
+
+
+#m5 {
+    position: relative;
+    width:250px; /* Adjust as needed */
+    height:300px;
+    top:160px;
+    left:250px;
+    border-radius:20px;
+    background-color: lightgray; /* For visualization */
+  }
+
+  #m5 img {
+     width: 100%;
+    height: 100%;
+    margin-left:50px;
+    object-fit: contain;
+  }
+   #m5:hover {
+       background-color: #f08080; /* Changes color on hover */
+       transform: scale(1.1); /* Example: Enlarges on hover */
+   }
+  #m6 {
+    position: absolute;
+    width: 50px; /* Adjust as needed */
+    height: 50px;
+    bottom: 40px; /* Moves it to bottom of #m11 */
+    left: 1030px; /* Aligns to bottom-left */
+    top:400px;
+    transition: all 0.5s ease-in-out; /* Smooth transition for all changes */
+
+  }
+
+  #m6 img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+  }
+
+
+    </style>
+    </head>
+    <body>
+        <div class="main1">
+        <img src="https://i.pinimg.com/736x/19/8b/2f/198b2f01e73b905772279616eccc7c65.jpg" 
+alt="" style="filter:brightness(50%);">
+        <!-- Main11 -->
+        <div class="main11">
+            <img src="https://wallpaperaccess.com/full/6075689.png" alt="Website Not Found">
+        </div>
+        <!-- Main 12 -->
+       <div class="main12">
+            <h1>Unlimited movies,</h1>
+            <h1>TV shows and more</h1>
+            <p>Starts at ₹149. Cancel at any time.</p>
+            <p>Ready to watch? Enter your email to create or restart your membership.</p>
+        </div>
+      <!-- Main13 -->
+       <div class="main13">
+            <table>
+                <tr>
+                    <td id="s1"><input type="text" placeholder="Enter your Email"></td>
+                    <td id="s1"><button><b>Get Started</b></button></td>
+                </tr>
+            </table>
+        </div>
+      <!-- div Button at the top -->
+       <div class="main14">
+            <table>
+                <tr>
+                    <td id="td">
+                        <select name="language" id="">
+                            <option>English</option>
+                            <option>தமிழ்</option>
+                        </select>
+                    </td>
+                    <td id="td1" style=" type:submit"> Sign In</td> <!-- if we use button tag inside the td we got two bos while styling got some issues -->
+                </tr>
+            </table>
+        </div>
+    </div>
+  <! add model Main2 div-->
+   
+ <div class="main2">
+      <div class="m1">
+          <div class="m11">
+               <img src="https://w7.pngwing.com/pngs/922/184/png-transparent-popcorn-cinema-popcorn-food-film-popcorn-makers-thumbnail.png"  alt="" >
+          </div>
+          <div class="m12">
+            <p><b>The Netflix You love for just Us $6.99</b></p>
+            <p> Get our most affordable, advert supported plan.</p>
+          </div>
+          <div class="m13"> 
+           <button>Learn More</button>
+          </div>
+          <div class="m14">
+              <img src="https://www.citypng.com/public/uploads/preview/png-red-round-close-x-icon-701751695038864apmfqv2kp1.png">
+           </div>
+       </div>
+       <div id="m1">
+           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsZ4-s-wJkCzBN5Y7PskSU2qQoLd0-ba6rZw&s">
+         </div>
+        <div id="m2">
+         <img src="https://static.vecteezy.com/system/resources/previews/011/288/267/original/golden-number-1-png.png"></div>
+
+        <div id="m11">
+           <img src="https://m.media-amazon.com/images/M/MV5BNDI4MWViNmEtYWQ1NC00MDIyLTk0MzMtOWU2NjI1NTkyOTUyXkEyXkFqcGc@._V1_.jpg">
+         </div>
+        <div id="m22">
+         <img src="https://static.vecteezy.com/system/resources/previews/011/288/429/original/golden-number-2-png.png">
+        </div> 
+        <div id="m3">
+           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsZ4-s-wJkCzBN5Y7PskSU2qQoLd0-ba6rZw&s">
+         </div>
+        <div id="m4">
+         <img src="https://static.vecteezy.com/system/resources/previews/011/297/442/original/golden-number-3-png.png"></div>
+        
+  <div id="m5">
+           <img src="https://m.media-amazon.com/images/M/MV5BNDI4MWViNmEtYWQ1NC00MDIyLTk0MzMtOWU2NjI1NTkyOTUyXkEyXkFqcGc@._V1_.jpg">
+         </div>
+        <div id="m6">
+         <img src="https://th.bing.com/th/id/R.0f88ca298d175d76369b5fac1287afdf?rik=RQd%2f1odq%2f7kWtQ&riu=http%3a%2f%2fpngimg.com%2fuploads%2fnumber4%2fnumber4_PNG15006.png&ehk=k5vxwPYQ%2fWqcY5WlDCAPkmCtKHfMggFCSXS%2fCR05FjI%3d&risl=&pid=ImgRaw&r=0">
+        </div> 
+
+
+   </div>
+</body>
+</html>
+
+
+
