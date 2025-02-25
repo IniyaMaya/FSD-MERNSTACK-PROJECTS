@@ -1,0 +1,64 @@
+<!DOCTYPEHTML>
+<html>
+<head>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator</title>
+<style>
+body {
+            text-align: center;
+            background-color: #f4f4f4;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 350px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+        h2 {
+            color: #333;
+        }
+button{
+width:100px;
+height:20px;
+margin-top:10px;
+background-color:green;
+
+}
+#qrCode {
+    margin-top: 20px;
+    padding: 15px;
+    background: #fff;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    display: inline-block;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+</style>
+<body>
+<div class="container">
+<h2> QR Code Generator</h2></br>
+<input type="text" id="text" placeholder="Enter the text or URL"/></br>
+<button onclick="getQRCode()">Get QR Code</button></br>
+</div>
+<div id="qrCode"> </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script>
+  function getQRCode(){
+    let textt=document.getElementById("text").value;
+     const qrCodeContainer=document.getElementById("qrCode"); 
+     qrCodeContainer.innerHTML = "";
+   
+      if(textt!==""){
+   new QRCode(qrCodeContainer,{text:textt, width:150, height:150});
+   }else {
+                alert("Please enter a text or URL to generate a QR code!");
+            }
+  }
+</script>
+</body</html>
