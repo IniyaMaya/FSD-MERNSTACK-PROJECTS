@@ -1,0 +1,90 @@
+<!DOCTYPEHTML>
+<html>
+<head>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoogleLanguageTranslator</title>
+<style>
+.div {
+            position: relative;
+            text-align: center;
+             top:10px;
+        }
+#translator {
+            position: absolute;
+            bottom: 0px; /* Moves translator below the form */
+            left: 50%;
+            transform: translateX(-50%);
+        }
+body {
+            background-color: #333; /* Just for better visibility */
+            color: azure;
+            font-size: xx-large;
+            text-align: center;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+h1{
+position: absolute;
+             top: 10px;
+}
+        form {
+            position: absolute;
+             top: 140px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 400px;
+            display: flex;
+            flex-direction: column;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        input {
+            width: 100%;
+            margin: 10px 0;
+            padding: 10px;
+            font-size: 18px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            font-size: 18px;
+            background-color: teal;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: darkcyan;
+        }</style>
+</head>
+<body class="div">
+<h1>Login Form</h1>
+<form>
+<label for=""> Name</label>
+<input type="text" placeholder="Enter Your Name">
+<label for=""> Number</label>
+<input type="Number" placeholder="Enter Your Number">
+
+<label for=""> Email</label>
+<input type="Email" placeholder="Enter Your Email">
+<button><b>Submit</b></button>
+</form>
+
+<div id='translator'></div>
+<script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({pageLanguage: 'en'}, 'translator');
+        }
+    </script>
+
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+</html>
