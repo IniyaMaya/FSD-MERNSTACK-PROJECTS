@@ -1,0 +1,65 @@
+<!DOCTYPEHTML>
+<html>
+<head>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RandomUserGenerator</title>
+<style>
+body{
+text-align:center;}
+#user{
+margin-top:10px;
+}
+img {
+    width: 150px; /* Adjust the size */
+    height: 150px;
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover; /* Ensures the image fills the circular frame properly */
+    border: 3px solid #333; /* Optional: Adds a border */
+}
+button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+</style>
+</head>
+<body>
+<div>
+<h1>Random User Generator</h1>
+<button onclick="fetchData()">Get Random User</button>
+<div id="user">
+<p > Click a button to get a random user.</p></div>
+</div>
+<script>
+async function fetchData(){
+   let contain = document.getElementById("user");
+       try{
+  
+         let response =await fetch('https://randomuser.me/api/');
+         let data = await response.json();
+         let user =data.results[0];
+         let userName =`${user.name.title} . ${user.name.first} ${user.name.last}`;
+         let gender = user.gender;
+         let email = user.email;
+         let picture = user.picture.large; 
+       contain.innerHTML=`<img src="${picture}" alt="User Image">
+                     <h3>${userName}</h3>
+                     <p>${gender}</p>
+                     <p>${email}</p>`;
+
+           }catch(err){
+          contain.innerHTML=`<p> No user data found. try again later.</p>`; <!-- inner html also have back ticks "`" -->
+            }
+   }
+</script>
+</body>
